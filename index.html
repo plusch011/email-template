@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!--[if (gte mso 9)|(IE)]>
+    <style type="text/css">
+        table {border-collapse: collapse;}
+    </style>
+    <![endif]-->
+</head>
+<body>
+<center class="wrapper">
+    <div class="webkit">
+        <!--[if (gte mso 9)|(IE)]>
+        <table width="600" align="center">
+            <tr>
+                <td>
+        <![endif]-->
+        <table class="outer" align="center">
+            <tr>
+                <td class="green">
+                    <img src="http://styleguide.macmillan-platform.com/email/email-logo-web.png"
+                         alt="Macmillan Publishers: Atlas"
+                         height="60">
+                </td>
+            </tr>
+            <tr>
+                <td class="one-column white">
+                    <table width="100%">
+                        <tr>
+                            <td class="y-padding-1 x-padding-2 contents size-18 ">
+                                <p class="y-padding-0 media-centered">Greetings from Delphi</p>
+                                <p class="text-green media-centered">
+                                    <i><b>{{ name }}</b></i> assignment as <i><b>{{ title }}</b></i>
+                                    has been submitted for your approval.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="two-column white x-padding-3 y-padding-0">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="100%">
+                        <tr>
+                            <td width="50%" valign="top">
+                    <![endif]-->
+                    <div class="column">
+                        <table width="100%">
+                            <tr>
+                                <td class="">
+                                    <table class="contents">
+                                        <tr>
+                                            <td class="centered y-padding-0">
+                                                <a
+                                                        href="{{ url }}"
+                                                        class="button button--approve white text-crimson size-14">
+                                                    Approve
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--[if (gte mso 9)|(IE)]>
+                    </td><td width="50%" valign="middle">
+                    <![endif]-->
+                    <div class="column">
+                        <table width="100%">
+                            <tr>
+                                <td class="">
+                                    <table class="contents">
+                                        <tr>
+                                            <td class="centered y-padding-0">
+                                                <a
+                                                        href="{{ url }}"
+                                                        class="button button--review crimson text-white size-14">
+                                                    Review in Delphi
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--[if (gte mso 9)|(IE)]>
+                    </td>
+                    </tr>
+                    </table>
+                    <![endif]-->
+                </td>
+            </tr>
+            {% if comments %}
+            <tr>
+                <td class="one-column light-gray">
+                    <table width="100%">
+                        <tr class="">
+                            <td class="inner size-18 x-padding-3">
+                                <h4 class="centered">
+                                    The following <b>{{ number_fields }}</b> fields have been modified:
+                                </h4>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="two-column light-gray x-padding-3">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="100%">
+                        <tr>
+                            <td width="50%" valign="top">
+                    <![endif]-->
+                    <div class="column-top">
+                        <table width="100%">
+                            <tr>
+                                <td class="inner">
+                                    <table class="contents">
+                                        <tr>
+                                            <td class="">
+                                                <p class="media-centered"><b>Old Value:</b></p>
+
+                                                <p class="text">{{ old_field_name }}</p>
+                                                <p class="text-gray">{{ old_field_value }}</p>
+
+                                                <p class="text">{{ old_field_name }}</p>
+                                                <p class="text-gray">{{ old_field_value }}</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--[if (gte mso 9)|(IE)]>
+                    </td><td width="50%" valign="middle">
+                    <![endif]-->
+                    <div class="column-top">
+                        <table width="100%">
+                            <tr>
+                                <td class="inner">
+                                    <table class="contents">
+                                        <tr>
+                                            <td class="">
+                                                <p class="media-centered"><b>New Value:</b></p>
+
+                                                <p class="text">{{ new_field_name }}</p>
+                                                <p class="text-gray">{{ new_field_value }}</p>
+
+                                                <p class="text">{{ new_field_name }}</p>
+                                                <p class="text-gray">{{ new_field_value }}</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--[if (gte mso 9)|(IE)]>
+                    </td>
+                    </tr>
+                    </table>
+                    <![endif]-->
+                </td>
+            </tr>
+            {% endif %}
+            <tr>
+                <td class="one-column light-gray">
+                    <table width="100%">
+                        <tr>
+                            <td class="inner contents x-padding-3 text-gray y-padding-2">
+                                <p class="centered">
+                                    *To view all Changes please review in Delphi and take the appropriate
+                                    approval action (Approve/Deny/Not Approve)
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="two-column green y-padding-0">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="100%">
+                        <tr>
+                            <td width="50%" valign="top">
+                    <![endif]-->
+                    <div class="column max-60">
+                        <table width="100%">
+                            <tr>
+                                <td class="inner ">
+                                    <table class="contents">
+                                        <tr>
+                                            <td class="text-white y-padding-0 x-padding-0 media-centered">
+                                                <h3>Delphi Knowledge Base Articles</h3>
+                                                <p>
+                                                    Visit Delphi FAQ to find answers for your
+                                                    questions, or read to How-To articles
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--[if (gte mso 9)|(IE)]>
+                    </td><td width="50%" valign="middle">
+                    <![endif]-->
+                    <div class="column max-40">
+                        <table width="100%">
+                            <tr>
+                                <td class="centered ">
+                                    <table class="contents">
+                                        <tr>
+                                            <td class="">
+                                                <div class="centered y-padding-0 x-padding-0">
+                                                    <a href="{{ url }}" class="button button-dkb white text-green s">
+                                                        Delphi Knowledge Base
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--[if (gte mso 9)|(IE)]>
+                    </td>
+                    </tr>
+                    </table>
+                    <![endif]-->
+                </td>
+            </tr>
+        </table>
+        <!--[if (gte mso 9)|(IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+    </div>
+</center>
+</body>
+</html>
